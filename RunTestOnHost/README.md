@@ -45,7 +45,7 @@ make simple_e2e
 ```
 You can keep repeating this step if you made any local changes and want to run e2e tests again.
 
-Steps 1,2 and 3 are supposed to be one time step unless you want to remove vagrant environment from your machine.
+**Steps 1,2 and 3 are supposed to be one time step unless you want to remove vagrant environment from your machine.**
 
 # Cleanup
 1) Cleanup test environment

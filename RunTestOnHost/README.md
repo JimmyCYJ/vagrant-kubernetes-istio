@@ -37,12 +37,13 @@ sh startup_linux_host.sh
 
 Push images from your local dev environment to local registry on vagrant vm:
 ```bash
+cd $ISTIO/istio/vagrant-kubernetes-istio/RunTestOnHost
 sh test_setup.sh
 ```
 After this you can run all the e2e tests using normal make commands. Ex:
 ```bash
 cd $ISTIO/istio
-make simple_e2e
+make e2e_simple
 ```
 You can keep repeating this step if you made any local changes and want to run e2e tests again.
 

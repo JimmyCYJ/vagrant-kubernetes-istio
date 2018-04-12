@@ -28,7 +28,7 @@ git clone https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
 3) Setup Vagrant Environment
 
 ```bash
-cd RunTestOnHost
+cd vagrant-kubernetes-istio/RunTestOnHost
 sh startup_linux_host.sh
 ```
 

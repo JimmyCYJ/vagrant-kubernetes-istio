@@ -26,6 +26,7 @@ git clone https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
 ```
 
 3) Setup Vagrant Environment
+Script will prompt for sudo password.
 
 ```bash
 cd vagrant-kubernetes-istio/RunTestOnHost

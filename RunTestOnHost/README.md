@@ -22,7 +22,7 @@ cd vagrant
 2) Clone this repository in this folder
 
 ```bash
-https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
+git clone https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
 ```
 
 3) Setup Vagrant Environment

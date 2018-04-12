@@ -41,6 +41,7 @@ sh test_setup.sh
 ```
 After this you can run all the e2e tests using normal make commands. Ex:
 ```bash
+cd $ISTIO/istio
 make simple_e2e
 ```
 You can keep repeating this step if you made any local changes and want to run e2e tests again.

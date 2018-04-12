@@ -28,8 +28,8 @@ Script will prompt for sudo password.
 
 ```bash
 cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVM
-chmod +x startup_linux_host.sh
-sh startup_linux_host.sh
+chmod +x host_setup.sh
+sh host_setup.sh
 ```
 
 ```bash

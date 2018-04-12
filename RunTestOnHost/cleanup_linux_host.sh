@@ -1,4 +1,6 @@
 #!/bin/bash
+# Destroy vagrant vm
+vagrant destroy
 
 # Cleanup linux host setup to talk to kubernetest cluster on Vagrant VM.
 cp ~/.kube/config_old ~/.kube/config

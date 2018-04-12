@@ -26,14 +26,25 @@ git clone https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
 ```
 
 3) Setup Vagrant Environment
-Script will prompt for sudo password.
-
+Run the following commands to bring up and set up the vagrant vm
 ```bash
 cd vagrant-kubernetes-istio/RunTestOnHost
-sh startup_linux_host.sh
+sh startup.sh
 ```
 
-4) Now you are ready to run tests!
+4) Setup Docker daemon on Host
+# On MacOS
+Click on the docker icon and go into Preferences..., click into the Daemon tag.
+Add `10.10.0.2:5000` to Insecure registries.
+Finally click the `Apply and Start` button in the bottom to restart Docker with new setting.
+
+# On Linux
+Run the following script the complete the settings:
+```bash
+sh linux_docker_setup.sh
+```
+
+5) Now you are ready to run tests!
 
 Push images from your local dev environment to local registry on vagrant vm:
 ```bash

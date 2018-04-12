@@ -43,9 +43,10 @@ sh test_setup.sh
 After this you can run all the e2e tests using normal make commands. Ex:
 ```bash
 cd $ISTIO/istio
-make e2e_simple
+make e2e_simple E2E_ARGS="--use_local_cluster"
 ```
 You can keep repeating this step if you made any local changes and want to run e2e tests again.
+Add E2E_ARGS="--use_local_cluster" to all your e2e tests as tests are we are running a local cluster.
 
 **Steps 1,2 and 3 are supposed to be one time step unless you want to remove vagrant environment from your machine.**
 

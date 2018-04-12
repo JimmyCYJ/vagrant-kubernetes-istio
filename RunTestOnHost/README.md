@@ -26,6 +26,10 @@ git clone https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
 ```
 
 ## 3) Setup Vagrant Environment
+Temporary step below (this will be checked-in in istio repo and thus won't be needed afterwards):
+```bash
+sed -i 's/kube-registry.kube-system.svc.cluster.local/kube-registry/' $ISTIO/istio/tests/util/localregistry/localregistry.yaml 
+```
 Run the following commands to bring up and set up the vagrant vm
 ```bash
 cd vagrant-kubernetes-istio/RunTestOnHost

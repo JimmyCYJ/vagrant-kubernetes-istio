@@ -1,17 +1,17 @@
 This sets up your local linux box to run tests on a kubernetes cluster on vagrant VM.
 
-### Benefits:
+# Benefits:
 1) Setup the vagrant VM Environment once and then using your normal make e2e_all commands from your development environment you can run tests on vagrant VM.
 2) No need to worry about kubernetes cluster setup.. scripts will take care of it for you
 3) TODO: Debug tests right from your development environment.
 
-### Prereqs:
+# Prereqs:
 Nothing :)
 Well, not really, you need to have Istio Dev Environment setup on your box!
 Refer: https://github.com/istio/istio/blob/master/DEV-GUIDE.md for that.
 
-### Setup
-##1) Create a vagrant directory inside your istio repository.
+# Setup
+## 1) Create a vagrant directory inside your istio repository.
 
 ```bash
 cd $ISTIO/istio
@@ -19,32 +19,32 @@ mkdir -p vagrant
 cd vagrant
 ```
 
-##2) Clone this repository in this folder
+## 2) Clone this repository in this folder
 
 ```bash
 git clone https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
 ```
 
-##3) Setup Vagrant Environment
+## 3) Setup Vagrant Environment
 Run the following commands to bring up and set up the vagrant vm
 ```bash
 cd vagrant-kubernetes-istio/RunTestOnHost
 sh startup.sh
 ```
 
-##4) Setup Docker daemon on Host
-# On MacOS
+## 4) Setup Docker daemon on Host
+### On MacOS
 Click on the docker icon and go into Preferences..., click into the Daemon tag.
 Add `10.10.0.2:5000` to Insecure registries.
 Finally click the `Apply and Start` button in the bottom to restart Docker with new setting.
 
-# On Linux
+### On Linux
 Run the following script the complete the settings:
 ```bash
 sh linux_docker_setup.sh
 ```
 
-##5) Now you are ready to run tests!
+## 5) Now you are ready to run tests!
 
 Push images from your local dev environment to local registry on vagrant vm:
 ```bash
@@ -61,14 +61,14 @@ Add E2E_ARGS="--use_local_cluster" to all your e2e tests as tests are we are run
 
 **Steps 1,2 and 3 are supposed to be one time step unless you want to remove vagrant environment from your machine.**
 
-### Cleanup
-##1) Cleanup test environment
+# Cleanup
+## 1) Cleanup test environment
 ```bash
 cd $ISTIO/istio/vagrant/vagrant-kubernetes-istio/RunTestOnHost
 vagrant destroy
 ```
 
-##2) Cleanup vagrant environment
+## 2) Cleanup vagrant environment
 This is necessary if you want to remove vagrant VM setup from your host and want to bring it back to original state
 ```bash
 cd $ISTIO/istio/vagrant/vagrant-kubernetes-istio/RunTestOnHost

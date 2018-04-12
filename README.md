@@ -1,9 +1,9 @@
 # vagrant-kubernetes-istio
 
-Set up Kubernetes on VM with vagrant for Istio testing.
+Set up Kubernetes on VM with vagrant for Istio e2e tests, so that we can run Istio e2e tests on local machine [issue](https://github.com/istio/istio/issues/4536)
 
 # [RunTestOnHost](https://github.com/JimmyCYJ/vagrant-kubernetes-istio/tree/master/RunTestOnHost "RunTestOnHost")
-
+This test environment is tested on Ubuntu 16.04 (host), virtualbox 5.2.8, docker 17.09.0-ce, kubernetes 1.10.
  - Build Istio docker images on host machine.
  - Set up private docker registry in Kubernetes on VM.
  - Push images from host to VM. The images are stored in private docker registry
@@ -11,7 +11,7 @@ Set up Kubernetes on VM with vagrant for Istio testing.
 
 
 # [RunTestOnVm](https://github.com/JimmyCYJ/vagrant-kubernetes-istio/tree/master/RunTestOnVm "RunTestOnVm")
-
+This test environment is tested on Ubuntu 16.04 (host), virtualbox 5.2.8, docker 17.09.0-ce, kubernetes 1.10.
  - Build Istio docker images on host machine.
  - Set up private docker registry in Kubernetes on VM.
  - Push images from host to VM. The images are stored in private docker registry

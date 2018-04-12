@@ -37,7 +37,7 @@ sh startup_linux_host.sh
 
 Push images from your local dev environment to local registry on vagrant vm:
 ```bash
-cd $ISTIO/istio/vagrant-kubernetes-istio/RunTestOnHost
+cd $ISTIO/istio/vagrant/vagrant-kubernetes-istio/RunTestOnHost
 sh test_setup.sh
 ```
 After this you can run all the e2e tests using normal make commands. Ex:
@@ -53,7 +53,7 @@ Add E2E_ARGS="--use_local_cluster" to all your e2e tests as tests are we are run
 # Cleanup
 1) Cleanup test environment
 ```bash
-cd $ISTIO/istio/vagrant/RunTestOnHost
+cd $ISTIO/istio/vagrant/vagrant-kubernetes-istio/RunTestOnHost
 vagrant destroy
 ```
 

@@ -60,7 +60,7 @@ vagrant destroy
 2) Cleanup vagrant environment
 This is necessary if you want to remove vagrant VM setup from your host and want to bring it back to original state
 ```bash
-cd $ISTIO/istio/vagrant/RunTestOnHost
+cd $ISTIO/istio/vagrant/vagrant-kubernetes-istio/RunTestOnHost
 sh cleanup_linux_host.sh
 ```
 

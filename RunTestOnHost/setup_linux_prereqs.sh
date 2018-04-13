@@ -24,11 +24,16 @@ sudo apt-get install -f
 #Install Curl
 echo "Install Curl"
 sudo sed -i -e 's/us.archive.ubuntu.com/archive.ubuntu.com/g' /etc/apt/sources.list
-sudo apt-get update
-sudo apt-get install curl
+sudo apt-get --quiet -y update
+sudo apt-get --quiet -y install curl
 
 #Install Docker
 echo "Install Docker"
 curl -L https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-ce_18.03.0~ce-0~debian_amd64.deb docker-ce.deb
 sudo dpkg -i docker-ce.deb
+
+# Install vagrant.
+echo "Install vagrant"
+sudo apt-get --quiet -y update
+sudo apt-get --quiet -y install vagrant 
 

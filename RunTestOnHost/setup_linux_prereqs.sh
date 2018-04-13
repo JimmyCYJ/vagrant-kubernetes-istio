@@ -21,7 +21,14 @@ curl -L https://download.virtualbox.org/virtualbox/5.2.8/virtualbox-5.2_5.2.8-12
 sudo dpkg -i virtualbox.deb
 sudo apt-get install -f
 
+#Install Curl
+echo "Install Curl"
 sudo sed -i -e 's/us.archive.ubuntu.com/archive.ubuntu.com/g' /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get install curl
+
+#Install Docker
+echo "Install Docker"
+curl -L https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-ce_18.03.0~ce-0~debian_amd64.deb docker-ce.deb
+sudo dpkg -i docker-ce.deb
 

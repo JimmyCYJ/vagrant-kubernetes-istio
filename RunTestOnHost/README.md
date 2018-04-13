@@ -10,12 +10,16 @@ This sets up your local linux box to run tests on a kubernetes cluster on vagran
 2) dpkg (should be available on linux, but make sure it's there on your mac box)
 3) curl
 4) [virtual box](https://www.virtualbox.org/wiki/Downloads)
+
    Verify `virtualbox` command opens up console for virtual box showing your vm's if any.
 5) [docker-ce](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1)
+
    Verify `docker version` returns version >= 18.03.0-ce
 6) [vagrant](https://www.vagrantup.com/downloads.html)
+
    Verify `vagrant -v` returns version >= Vagrant 2.0.3
 7) [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl)
+
    Verify `kubectl version` returns versions for both server and client
 
 For installation of curl, virtualbox, docker, vagrant and kubectl on linux, you can try following script:

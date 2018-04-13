@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Install vagrant.
-echo "Install vagrant"
-sudo apt-get --quiet -y update
-sudo apt-get --quiet -y install vagrant 
-
 # Setup vagrant.
 echo "Setup vagrant"
 vagrant destroy

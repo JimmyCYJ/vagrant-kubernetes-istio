@@ -11,6 +11,7 @@ This sets up your local linux box to run tests on a kubernetes cluster on vagran
 3) curl
 4) [virtual box](https://www.virtualbox.org/wiki/Downloads)
 5) [docker-ce](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1)
+6) [vagrant](https://www.vagrantup.com/downloads.html)
 
 For installation of curl, virtualbox and docker on linux, you can try following script:
 ```bash

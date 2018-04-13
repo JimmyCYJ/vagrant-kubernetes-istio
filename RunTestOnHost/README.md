@@ -6,8 +6,16 @@ This sets up your local linux box to run tests on a kubernetes cluster on vagran
 3) TODO: Debug tests right from your development environment.
 
 # Prereqs:
-Nothing :)
-Well, not really, you need to have Istio Dev Environment setup on your box!
+1) apt-get (should be available on linux, but make sure it's there on your mac box)
+2) dpkg (should be available on linux, but make sure it's there on your mac box)
+3) curl
+4) [virtual box](https://www.virtualbox.org/wiki/Downloads)
+5) [docker-ce](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1)
+For installation of curl, virtualbox and docker on linux, you can try following script:
+```bash
+sh setup_linux_prereqs.sh
+```
+Also you need to have Istio Dev Environment setup on your box!
 Refer: https://github.com/istio/istio/blob/master/DEV-GUIDE.md for that.
 
 # Setup

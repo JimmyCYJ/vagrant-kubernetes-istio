@@ -6,6 +6,9 @@ vagrant up
 HUB=10.10.0.2:5000 
 TAG=latest 
 
+# Remove old imges.
+docker images -q |xargs docker rmi
+
 # Make and Push images to insecure local registry on VM.
 cd $ISTIO/istio
 make docker HUB=10.10.0.2:5000 TAG=latest

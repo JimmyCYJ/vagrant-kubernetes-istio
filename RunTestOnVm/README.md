@@ -67,6 +67,11 @@ exit
 ```
 
 4) Now you are ready to run tests!
+Make sure your VM is up and running. If not, you can run this command first.
+```bash
+cd $ISTIO/vagrant
+vagrant up --provider virtualbox
+```
 
 Push images from your host machine to local registry on vagrant vm:
 ```bash

@@ -64,7 +64,7 @@ cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 vagrant ssh
 
 # These commands need to run in VM.
-sh vm_setup.sh
+sh /vagrant-kubernetes-istio/RunTestOnVm/vm_setup.sh
 
 # Make sure local registry is deployed successfully by running kubectl get pods -n kube-system."
 kubectl get pods -n kube-system

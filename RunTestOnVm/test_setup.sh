@@ -1,6 +1,4 @@
 #!/bin/bash
-# Start vagrant if not already started
-vagrant up --provider virtualbox
 
 # Setup HUB and TAG to talk to insecure local registry on VM.
 HUB=10.10.0.2:5000 

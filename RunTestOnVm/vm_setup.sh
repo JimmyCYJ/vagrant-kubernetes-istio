@@ -32,7 +32,3 @@ sudo systemctl restart kube-apiserver
 echo "Copy kube config file to ~/.kube/config"
 mkdir $HOME/.kube
 cp /etc/kubeconfig.yml $HOME/.kube/config
-echo "Deploy kubernetes local docker registry."
-kubectl apply -f $ISTIO/tests/util/localregistry/localregistry.yaml
-
-echo "Make sure local registry is deployed successfully by running kubectl get pods -n kube-system."

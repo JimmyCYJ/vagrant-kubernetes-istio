@@ -31,4 +31,5 @@ kubectl get pods -n kube-system
 
 # Copy kube config
 echo "Copy kube config file to ~/.kube/config"
+mkdir $HOME/.kube
 cp /etc/kubeconfig.yml $HOME/.kube/config

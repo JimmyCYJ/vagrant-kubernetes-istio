@@ -34,4 +34,4 @@ echo "Copy kube config file to ~/.kube/config"
 mkdir $HOME/.kube
 cp /etc/kubeconfig.yml $HOME/.kube/config
 echo "Deploy kubernetes local docker registry."
-kubectl apply -f tests/util/localregistry/localregistry.yaml
+kubectl apply -f $ISTIO/tests/util/localregistry/localregistry.yaml

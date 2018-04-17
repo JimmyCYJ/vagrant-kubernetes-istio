@@ -3,9 +3,6 @@
 # Setup vagrant.
 echo "Setup vagrant"
 vagrant up --provider virtualbox
-vagrant ssh -c "echo export HUB=localhost:5000 >> ~/.bashrc"
-vagrant ssh -c "echo export TAG=latest >> ~/.bashrc"
-vagrant ssh -c "source ~/.bashrc"
 
 # Setting up host to talk to insecure registry on VM.
 echo "Adding insecure registry to docker daemon in host vm..."

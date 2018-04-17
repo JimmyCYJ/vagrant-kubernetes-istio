@@ -49,7 +49,7 @@ git clone https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
 Please run the following command to set up vagrant environment. The script will prompt for sudo password.
 
 ```bash
-cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVM
+cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm
 sh host_setup.sh
 ```
 
@@ -103,6 +103,6 @@ vagrant halt
 2) Cleanup vagrant environment
 This is necessary if you want to remove vagrant VM setup from your host and want to bring it back to original state
 ```bash
-cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVM
+cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 sh cleanup_linux_host.sh
 ```

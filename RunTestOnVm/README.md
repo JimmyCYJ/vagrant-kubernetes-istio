@@ -65,6 +65,13 @@ vagrant ssh
 # These commands need to run in VM.
 cd /vagrant-kubernetes-istio/RunTestOnVm
 sh vm_setup.sh
+# Wait a few seconds for the changes to kubernetes take effect.
+
+# Deploy kubernetes local docker registry."
+kubectl apply -f $ISTIO/tests/util/localregistry/localregistry.yaml
+
+# Make sure local registry is deployed successfully by running kubectl get pods -n kube-system."
+kubectl get pods -n kube-system
 exit
 ```
 

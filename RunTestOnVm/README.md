@@ -62,6 +62,8 @@ Please run the following command to set up VM.
 ```bash
 cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 sudo vagrant ssh
+# These commands need to run in VM.
+cd /vagrant-kubernetes-istio
 sh vm_setup.sh
 exit
 ```
@@ -83,7 +85,7 @@ After this you can run all the e2e tests in the virtual machine. Ex:
 cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 sudo vagrant ssh
 # The following commands need to run inside VM.
-cd $ISTIO/istio
+cd $ISTIO/
 make e2e_simple E2E_ARGS="--use_local_cluster"
 ```
 You can keep repeating this step if you made any local changes and want to run e2e tests again.

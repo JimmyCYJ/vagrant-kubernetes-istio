@@ -61,7 +61,7 @@ sed -i 's/kube-registry.kube-system.svc.cluster.local/kube-registry/' $ISTIO/ist
 Please run the following command to set up VM.
 ```bash
 sudo vagrant ssh
-cd /vagrant-kubernetes-istio
+cd $ISTIO/vagrant/vagrant-kubernetes-istio/
 sh RunTestOnVm/vm_setup.sh
 exit
 ```

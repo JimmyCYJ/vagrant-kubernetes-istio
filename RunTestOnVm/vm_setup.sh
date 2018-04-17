@@ -6,7 +6,7 @@ sudo apt-get --quiet -y install socat
 # Install go
 echo "Install go"
 sudo curl -O https://dl.google.com/go/go1.10.1.linux-amd64.tar.gz
-sudo tar -xvf go1.10.1.linux-amd64.tar.gz
+sudo tar -xf go1.10.1.linux-amd64.tar.gz
 sudo mv go /usr/local
 
 # Install git

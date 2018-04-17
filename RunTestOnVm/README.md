@@ -63,7 +63,7 @@ Please run the following command to set up VM.
 cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 sudo vagrant ssh
 # These commands need to run in VM.
-cd /vagrant-kubernetes-istio
+cd /vagrant-kubernetes-istio/RunTestOnVm
 sh vm_setup.sh
 exit
 ```

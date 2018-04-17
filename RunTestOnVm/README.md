@@ -77,7 +77,7 @@ vagrant up --provider virtualbox
 
 Push images from your host machine to local registry on vagrant vm:
 ```bash
-cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVM
+cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 sh test_setup.sh
 ```
 After this you can run all the e2e tests in the virtual machine. Ex:

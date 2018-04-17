@@ -1,20 +1,7 @@
 #!/bin/bash
 
-# Install vagrant.
-echo "Install vagrant"
-sudo apt-get --quiet -y update
-sudo apt-get --quiet -y install vagrant 
-
-# Install virtualbox.
-echo "Install virtualbox"
-sudo apt-get install --quiet -y libpng16-16 libssl1.0.2 libvpx4
-curl -L https://download.virtualbox.org/virtualbox/5.2.8/virtualbox-5.2_5.2.8-121009~Ubuntu~xenial_amd64.deb --output virtualbox.deb
-sudo dpkg -i virtualbox.deb -y
-sudo apt-get install -f
-
 # Setup vagrant.
 echo "Setup vagrant"
-vagrant destroy
 vagrant up --provider virtualbox
 vagrant ssh -c "echo export HUB=localhost:5000 >> ~/.bashrc"
 vagrant ssh -c "echo export TAG=latest >> ~/.bashrc"

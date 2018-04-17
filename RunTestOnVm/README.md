@@ -60,16 +60,16 @@ sed -i 's/kube-registry.kube-system.svc.cluster.local/kube-registry/' $ISTIO/ist
 
 Please run the following command to set up VM.
 ```bash
+cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 sudo vagrant ssh
-cd $ISTIO/vagrant/vagrant-kubernetes-istio/
-sh RunTestOnVm/vm_setup.sh
+sh vm_setup.sh
 exit
 ```
 
 4) Now you are ready to run tests!
 Make sure your VM is up and running. If not, you can run this command first.
 ```bash
-cd $ISTIO/vagrant
+cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 vagrant up --provider virtualbox
 ```
 
@@ -80,7 +80,9 @@ sh test_setup.sh
 ```
 After this you can run all the e2e tests in the virtual machine. Ex:
 ```bash
+cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 sudo vagrant ssh
+# The following commands need to run inside VM.
 cd $ISTIO/istio
 make e2e_simple E2E_ARGS="--use_local_cluster"
 ```
@@ -92,7 +94,7 @@ Add E2E_ARGS="--use_local_cluster" to all your e2e tests as tests are we are run
 # Cleanup
 1) Cleanup test environment
 ```bash
-cd $ISTIO/vagrant/
+cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 vagrant halt
 ```
 

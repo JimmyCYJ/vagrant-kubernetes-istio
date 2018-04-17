@@ -4,8 +4,30 @@
 This sets up your local linux box to run tests on a kubernetes cluster on vagrant VM. 
 
 # Prereqs:
-Please follow Istio developer guide to set up environment on both host machine and VM. [environment setup](https://github.com/istio/istio/blob/master/DEV-GUIDE.md#setting-up-environment-variables) 
+The following tools are needed.
+1) apt-get (should be available on linux, but make sure it's there on your mac box)
+2) dpkg (should be available on linux, but make sure it's there on your mac box)
+3) curl
+4) [virtual box](https://www.virtualbox.org/wiki/Downloads)
 
+   Verify `virtualbox` command opens up console for virtual box showing your vm's if any.
+5) [docker-ce](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1)
+
+   Verify `docker version` returns version >= 18.03.0-ce
+6) [vagrant](https://www.vagrantup.com/downloads.html)
+
+   Verify `vagrant -v` returns version >= Vagrant 2.0.3
+7) [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl)
+
+   Verify `kubectl version` returns versions for both server and client
+
+For installation of curl, virtualbox, docker, vagrant and kubectl on linux, you can try following script:
+```bash
+sh setup_linux_prereqs.sh
+```
+Verify they are installed by running verification commands listed above for each of the components.
+
+Please follow Istio developer guide to set up environment on both host machine and VM. [environment setup](https://github.com/istio/istio/blob/master/DEV-GUIDE.md#setting-up-environment-variables) 
 
 # Setup on Host Machine
 1) Create a vagrant directory inside your istio repository.
@@ -17,38 +39,41 @@ mkdir -p vagrant
 cd vagrant
 ```
 
-2) Clone this repository in this folder
+2) Clone this repository into $ISTIO/vagrant.
 
 ```bash
 git clone https://github.com/JimmyCYJ/vagrant-kubernetes-istio.git
 ```
 
 3) Setup Vagrant Environment
-Script will prompt for sudo password.
+Please run the following command to set up vagrant environment. The script will prompt for sudo password.
 
 ```bash
 cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVM
-chmod +x host_setup.sh
 sh host_setup.sh
 ```
 
+This is temporary step. It will be checked-in in istio repo and thus won't be needed afterwards:
+```bash
+sed -i 's/kube-registry.kube-system.svc.cluster.local/kube-registry/' $ISTIO/istio/tests/util/localregistry/localregistry.yaml 
+```
+
+Please run the following command to set up VM.
 ```bash
 sudo vagrant ssh
 cd /vagrant-kubernetes-istio
-chmod +x RunTestOnVm/vm_setup.sh
 sh RunTestOnVm/vm_setup.sh
 exit
 ```
 
 4) Now you are ready to run tests!
 
-Push images from your local dev environment to local registry on vagrant vm:
+Push images from your host machine to local registry on vagrant vm:
 ```bash
 cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVM
-chmod +x test_setup.sh
 sh test_setup.sh
 ```
-After this you can run all the e2e tests using normal make commands. Ex:
+After this you can run all the e2e tests in the virtual machine. Ex:
 ```bash
 sudo vagrant ssh
 cd $ISTIO/istio
@@ -63,13 +88,12 @@ Add E2E_ARGS="--use_local_cluster" to all your e2e tests as tests are we are run
 1) Cleanup test environment
 ```bash
 cd $ISTIO/vagrant/
-vagrant destroy
+vagrant halt
 ```
 
 2) Cleanup vagrant environment
 This is necessary if you want to remove vagrant VM setup from your host and want to bring it back to original state
 ```bash
 cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVM
-chmod +x cleanup_linux_host.sh
 sh cleanup_linux_host.sh
 ```

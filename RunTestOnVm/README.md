@@ -27,7 +27,7 @@ sh setup_linux_prereqs.sh
 ```
 Verify they are installed by running verification commands listed above for each of the components.
 
-Please follow Istio developer guide to set up environment on both host machine and VM. [environment setup](https://github.com/istio/istio/blob/master/DEV-GUIDE.md#setting-up-environment-variables) 
+Please follow Istio developer guide to set up environment on both host machine and VM. [environment setup] (https://github.com/istio/istio/wiki/Dev-Guide#setting-up-environment-variables)
 
 # Setup on Host Machine
 1) Create a vagrant directory inside your istio repository.

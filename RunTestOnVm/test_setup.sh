@@ -16,7 +16,7 @@ make push HUB=10.10.0.2:5000 TAG=latest
 cd $curpath
 
 # Verify images are pushed in repository.
-echo "Check images present in repositories"
+echo "$(tput setaf 1)Please make sure images present in repositories$(tput sgr 0)"
 curl 10.10.0.2:5000/v2/_catalog -v
 
 

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-cp /istio.io/ $ISTIO -r
-
 # Copy kube config
 echo "Copy kube config file to ~/.kube/config"
 mkdir $HOME/.kube

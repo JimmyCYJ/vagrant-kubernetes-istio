@@ -27,7 +27,6 @@ sudo sed -i 's/--admission-control=AlwaysAdmit,ServiceAccount/--admission-contro
 sudo systemctl daemon-reload
 sudo systemctl stop kube-apiserver
 sudo systemctl restart kube-apiserver
-kubectl get pods -n kube-system
 
 # Copy kube config
 echo "Copy kube config file to ~/.kube/config"

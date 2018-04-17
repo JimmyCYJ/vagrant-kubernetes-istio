@@ -19,8 +19,6 @@ echo "export PATH=$PATH:$GOPATH/bin" >> $HOME/.profile
 echo "export ISTIO=/istio" >> $HOME/.profile
 echo "export HUB=localhost:5000" >> $HOME/.profile
 echo "export TAG=latest" >> $HOME/.profile
-echo "export HUB=localhost:5000" >> $HOME/.bashrc
-echo "export TAG=latest" >> $HOME/.bashrc
 source $HOME/.profile
 
 # Setting up kubernetest Cluster on VM for Istio Tests.

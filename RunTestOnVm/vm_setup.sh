@@ -14,12 +14,14 @@ echo "Install git"
 sudo apt-get --quiet -y install git
 
 # Set up Istio
-echo "export GOPATH=/usr/local/go" >> $HOME/.profile
+echo "export GOPATH=~/go" >> $HOME/.profile
 echo "export PATH=$PATH:$GOPATH/bin" >> $HOME/.profile
-echo "export ISTIO=/istio" >> $HOME/.profile
+echo "export ISTIO=$GOPATH/src/istio.io" >> $HOME/.profile
 echo "export HUB=localhost:5000" >> $HOME/.profile
 echo "export TAG=latest" >> $HOME/.profile
 source $HOME/.profile
+
+mkdir -p $ISTIO
 
 # Setting up kubernetest Cluster on VM for Istio Tests.
 echo "Adding priviledges to kubernetes cluster..."

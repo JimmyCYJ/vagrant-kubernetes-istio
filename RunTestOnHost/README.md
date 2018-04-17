@@ -29,7 +29,7 @@ sh setup_linux_prereqs.sh
 Verify they are installed by running verification commands listed above for each of the components.
 
 Also you need to have Istio Dev Environment setup on your box!
-Refer: https://github.com/istio/istio/blob/master/DEV-GUIDE.md for that.
+Refer: https://github.com/istio/istio/wiki/Dev-Guide for that.
 
 # Setup
 ## 1) Create a vagrant directory inside your istio repository.

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set up Istio
-echo "export GOPATH=/home/vagrant/go" >> /.profile
+echo "export GOPATH=/home/vagrant/go" >> $HOME/.profile
 echo "export PATH=$PATH:$GOPATH/bin" >> $HOME/.profile
 echo "export ISTIO=$GOPATH/src/istio.io" >> $HOME/.profile
 echo "export HUB=localhost:5000" >> $HOME/.profile
@@ -17,4 +17,4 @@ cp /etc/kubeconfig.yml $HOME/.kube/config
 
 # Deploy kubernetes local docker registry."
 echo "Deploy kubernetes local docker registry."
-kubectl apply -f $ISTIO/tests/util/localregistry/localregistry.yaml
+kubectl apply -f $ISTIO/istio/tests/util/localregistry/localregistry.yaml

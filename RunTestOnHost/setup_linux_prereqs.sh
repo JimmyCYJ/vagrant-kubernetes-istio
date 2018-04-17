@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Install virtualbox.
-echo "Install virtualbox"
+#Install Curl
+echo "Install Curl"
+sudo sed -i -e 's/us.archive.ubuntu.com/archive.ubuntu.com/g' /etc/apt/sources.list
+sudo apt-get --quiet -y update
+sudo apt-get --quiet -y install curl
 
 curl -L http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb --output libpng12.deb
 sudo dpkg -i libpng12.deb
@@ -17,15 +20,11 @@ sudo dpkg -i libsdl1.2debian.deb
 
 sudo apt-get install --quiet -y libpng16-16 libssl1.0.2 libvpx4
 
+# Install virtualbox.
+echo "Install virtualbox"
 curl -L https://download.virtualbox.org/virtualbox/5.2.8/virtualbox-5.2_5.2.8-121009~Ubuntu~xenial_amd64.deb --output virtualbox.deb
 sudo dpkg -i virtualbox.deb
 sudo apt-get install -f
-
-#Install Curl
-echo "Install Curl"
-sudo sed -i -e 's/us.archive.ubuntu.com/archive.ubuntu.com/g' /etc/apt/sources.list
-sudo apt-get --quiet -y update
-sudo apt-get --quiet -y install curl
 
 #Install Docker
 echo "Install Docker"

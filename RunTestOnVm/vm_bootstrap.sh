@@ -27,3 +27,10 @@ sudo systemctl restart kube-apiserver
 
 echo "$(tput setaf 1)Make sure flag --allow-privileged=true is passed to both kubelet and apiserver.$(tput sgr 0)"
 ps -ef | grep kube
+
+# Set up Istio
+echo "export GOPATH=/home/vagrant/go" >> /home/vagrant/.profile
+echo "export PATH=$PATH:$GOPATH/bin" >> /home/vagrant/.profile
+echo "export ISTIO=$GOPATH/src/istio.io" >> /home/vagrant/.profile
+echo "export HUB=localhost:5000" >> /home/vagrant/.profile
+echo "export TAG=latest" >> /home/vagrant/.profile

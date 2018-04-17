@@ -34,3 +34,5 @@ echo "export PATH=$PATH:$GOPATH/bin" >> /home/vagrant/.profile
 echo "export ISTIO=/home/vagrant/go/src/istio.io" >> /home/vagrant/.profile
 echo "export HUB=localhost:5000" >> /home/vagrant/.profile
 echo "export TAG=latest" >> /home/vagrant/.profile
+
+mkdir -p /home/vagrant/go/src/istio.io

@@ -62,11 +62,8 @@ Please run the following command to set up VM.
 ```bash
 cd $ISTIO/vagrant/vagrant-kubernetes-istio/RunTestOnVm/
 vagrant ssh
-# These commands need to run in VM.
-cd /vagrant-kubernetes-istio/RunTestOnVm
-sh vm_setup.sh
-# Wait a few seconds for the changes to kubernetes take effect.
 
+# These commands need to run in VM.
 # Deploy kubernetes local docker registry."
 kubectl apply -f $ISTIO/tests/util/localregistry/localregistry.yaml
 

@@ -25,3 +25,5 @@ sudo systemctl daemon-reload
 sudo systemctl stop kube-apiserver
 sudo systemctl restart kube-apiserver
 
+echo "$(tput setaf 1)Make sure flag --allow-privileged=true is passed to both kubelet and apiserver.$(tput sgr 0)"
+ps -ef | grep kube

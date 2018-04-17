@@ -14,3 +14,7 @@ mkdir -p $ISTIO
 echo "Copy kube config file to ~/.kube/config"
 mkdir $HOME/.kube
 cp /etc/kubeconfig.yml $HOME/.kube/config
+
+# Deploy kubernetes local docker registry."
+echo "Deploy kubernetes local docker registry."
+kubectl apply -f $ISTIO/tests/util/localregistry/localregistry.yaml

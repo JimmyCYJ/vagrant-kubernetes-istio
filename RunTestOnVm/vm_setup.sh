@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 mkdir -p $ISTIO
+# We cannot directly set up synced folder between $ISTIO in host machine and $ISTIO in VM.
+# Because at VM boot up stage synced folder setup comes before privision bootstrap.sh. 
+# Therefore directory $ISTIO in VM does not exist when Vagrant sets up synced folder.
 sudo ln -s /istio.io/istio/ $ISTIO/istio
 
 # Copy kube config

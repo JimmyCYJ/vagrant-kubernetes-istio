@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p $ISTIO
-cp rf /istio.io/istio /home/vagrant/go/src/istio.io 
+sudo ln -s /istio.io/istio/ $ISTIO/istio
 
 # Copy kube config
 echo "Copy kube config file to ~/.kube/config"

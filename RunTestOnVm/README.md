@@ -99,6 +99,10 @@ Add E2E_ARGS="--use_local_cluster" to all your e2e tests as tests are we are run
 
 # Debug with Delve
 vm_setup.sh already installs Delve for us. To use Delve, we need process id of the binary we want to debug.
+Assuem we have issue this command to run e2e_simple test.
+```bash
+make e2e_simple E2E_ARGS="--use_local_cluster --skip_cleanup"
+```
 For example, if we want to debug process pilot-discovery, we can find its pid by
 ```bash
 ps -ef | grep pilot-discovery

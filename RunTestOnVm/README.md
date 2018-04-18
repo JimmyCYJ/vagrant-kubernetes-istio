@@ -97,6 +97,19 @@ Add E2E_ARGS="--use_local_cluster" to all your e2e tests as tests are we are run
 
 **Steps 1,2 and 3 are supposed to be one time step unless you want to remove vagrant environment from your machine.**
 
+# Debug with Delve
+vm_setup.sh already installs Delve for us. To use Delve, we need process id of the binary we want to debug.
+For example, if we want to debug process pilot-discovery, we can find its pid by
+```bash
+ps -ef | grep pilot-discovery
+```
+Then, we can run Delve
+```bash
+sudo -E env "PATH=$PATH" dlv attach <pid of pilot-discovery>
+```
+
+For more information, please check [Debug an Istio container with Delve](https://github.com/istio/istio/wiki/Dev-Guide#debug-an-istio-container-with-delve)
+
 # Cleanup
 1) Cleanup test environment
 ```bash

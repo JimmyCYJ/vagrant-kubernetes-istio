@@ -14,3 +14,6 @@ cp /etc/kubeconfig.yml $HOME/.kube/config
 # Deploy kubernetes local docker registry."
 echo "Deploy kubernetes local docker registry."
 kubectl apply -f $ISTIO/istio/tests/util/localregistry/localregistry.yaml
+
+# install debugger Delve
+go get github.com/derekparker/delve/cmd/dlv

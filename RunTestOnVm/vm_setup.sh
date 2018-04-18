@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+mkdir -p $ISTIO
 sudo ln -s /istio.io/istio/ $ISTIO/istio
 
 # Copy kube config

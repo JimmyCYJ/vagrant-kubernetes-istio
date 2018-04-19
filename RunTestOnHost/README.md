@@ -31,20 +31,19 @@ sh setup_linux_prereqs.sh
 Verify they are installed by running verification commands listed above for each of the components.
 
 ## macOS
-1. Installation
-1.1 Install using homebrew
+1) Installation
+You can follow instructions in the official website to complete the installation process.
+[Docker](https://docs.docker.com/docker-for-mac/install/)
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+[Vagrant](https://www.vagrantup.com/downloads.html)
+
 With [Homebrew](https://brew.sh) installed, you can install all the prerequisites in one step:
 ```bash
 sh setup_macos_prerequs.sh
 ```
 
-1.2 Install following instructions on official websites
-[Docker](https://docs.docker.com/docker-for-mac/install/)
-[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-[Vagrant](https://www.vagrantup.com/downloads.html)
-
-2. Verification
-2.1 Docker
+2) Verification
+2.1) Docker
 ```bash
 docker version
 ``` 
@@ -52,12 +51,12 @@ should show you the version information of docker(>= 18.03.0-ce).
 After this, double-click Docker.app in the Applications folder to start Docker.
 The whale in the top status bar indicates that Docker is running, and accessible from a terminal.
 
-2.2 Vagrant
+2.2) Vagrant
 ```
 vagrant -v
 ```
 should show you the verison information of vagrant(>= Vagrant 2.0.3).
-2.3 VirtualBox
+2.3) VirtualBox
 ```bash
 virtualbox
 ``` 
